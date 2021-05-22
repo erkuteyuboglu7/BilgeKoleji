@@ -1,0 +1,362 @@
+﻿@model BilgeKolejii.Models.Ogrenciler
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Bilge Koleji</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="~/images/about_02.jpg" type="/image/x-icon" />
+    <link rel="apple-touch-icon" href="~/images/about_02.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="/css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="/js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="host_version">
+
+    @*Modal*@
+    <!--<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelllogedby="myModalLabel">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header tit-up">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Giriş Ekranı</h4>
+                </div>
+                <div class="modal-body customer-box">-->
+    @*Nav tabs*@
+    <!--<ul class="nav nav-tabs" style="margin-left: 180px; background: white;">
+        <li><a class="active" href="#Login" data-toggle="tab">Öğrenci Girişi</a></li>
+        <li><a href="#Registration" data-toggle="tab">Öğretmen Girişi</a></li>
+    </ul>-->
+    @*Tab panes*@
+    <!--<div class="tab-content">
+        <div class="tab-pane active" id="Login">
+            ViewBag.Mesaj
+            using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            Html.LabelFor(m => m.TCNo)
+                            Html.TextBoxFor(m => m.TCNo, new { class = "form-control", placeholder = "TC No" })-->
+    @*<input class="form-control" id="tc" placeholder="TC No" type="text">*@
+    <!--</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            Html.LabelFor(m => m.OkulNo)
+            Html.PasswordFor(m => m.OkulNo, new { class = "form-control", placeholder = "Okul No" })-->
+    @*<input class="form-control" id="exampleInputPassword1" placeholder="Okul No" type="password">*@
+    <!--</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <a href='Url.Action("Sinavlar", "Ogrenciler")' class="btn btn-light btn-radius btn-brd grd1">Giriş</a>
+                                    </div>
+                                </div>
+                            </form>
+
+                        }
+                    </div>
+                        <div class="tab-pane" id="Registration">
+                            <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" placeholder="Öğretmen Adı" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input class="form-control" id="password" placeholder="Şifre" type="password">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <a href='Url.Action("Index", "OgtSnv")' class="btn btn-light btn-radius btn-brd grd1">Giriş</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    @*LOADER*@
+    <!--<div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>-->
+    <!-- END LOADER
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                    <p class="nav-item active" style="color: white; font-size: 18px;">BİLGE KOLEJİ</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-host">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="@Url.Action("Index","Home")">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("About","Home")">Hakkımızda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Education","Home")">EĞİTİM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Gallery","Home")">GALERİ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Contact","Home")">İLETİŞİM</a></li>
+                        @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Sinavlar","Ogrenciler")">Giriş</a></li>*@
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="@Url.Action("Sinavlar","Ogrenciler")"><span>ÖĞRENCİ GİRİŞ</span></a></li>
+                    </ul>
+                    <p>'</p>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="@Url.Action("Index","OgtGiris")"><span>ÖĞRETMEN GİRİŞ</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+
+    <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div id="home" class="first-section" style="background-image:url('/images/slider-01.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-right">
+                                    <div class="big-tagline">
+                                        <h2><strong>Bilge Koleji</strong> Rize</h2>
+                                        <p class="lead"> Uluslararası Standartlarda Modern & Bilimsel Eğitim</p>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <div class="carousel-item">
+                <div id="home" class="first-section" style="background-image:url('/images/slider12.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-left">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight">Bilge Koleji <strong>Lisesi</strong></h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">Zamanın Ruhunda, Kararlı & Bilinçi Nesiller </p>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+            <div class="carousel-item">
+                <div id="home" class="first-section" style="background-image:url('/images/slider-03.jpg');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-left">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight"><strong>Beraber Geleceğe</strong></h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">Bilge Koleji Farkıyla Türkiye'nin Geleceğine Hazır Bireyler</p>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+            </div>
+
+            <!-- Left Control -->
+            <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <!-- Right Control -->
+            <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Duyurular</h3>
+                    <p class="lead"></p>
+                </div>
+            </div><!-- end title -->
+
+            <div class="row align-items-center" style="box-shadow: 7px 5px 4px #0984e3;
+			border-radius: 10px;">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>BİLGE KOLEJİ AKADEMİK ALTYAPISINI GÜÇLENDİREREK BÜYÜMEYE DEVAM EDİYOR</h2>
+                        <p>Uyguladığı eğitim modelleriyle Türkiye’de eğitim camiasına öncülük eden Bilge Koleji, bilimsel veriye dayalı eğitim anlayışıyla yenilikçi eğitim yaklaşımını sağlam bir akademik altyapı üzerine kuruyor. Türkiye genelinde büyümesine eğitimin kalitesini güçlendirerek devam ediyor.</p>
+
+                        <p> Türkiye genelinde büyümesine eğitimin kalitesini güçlendirerek devam ediyor. </p>
+
+                        @*<a href="#" class="hover-btn-new orange"><span>Devamını Oku</span></a>*@
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="/images/about_02.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div>
+            <div class="row align-items-center" style="box-shadow: 7px 5px 4px wheat;
+			border-radius: 10px;">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="/images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>LÖSEV'LE NİCE GÜLÜMSEMELERE ORTAK OLMA DİLEĞİYLE</h2>
+                        <p>LÖSEV’le nice gülümsemelere ortak olma dileğiyle... İyiliğin bulaşmasında desteklerini hissettiğimiz tüm velilerimize teşekkür ederiz. </p>
+
+
+
+                        @*<a href="#" class="hover-btn-new orange"><span>Devamını Oku</span></a>*@
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Hakkımızda</h3>
+                        </div>
+                        <p> Atatürkçü düşünceyi benimsemiş, yeniliklere açık, çağdaş teknolojiyi kullanan, Türkçeye hakim olmanın yanında en az iki yabancı dili yazıp konuşan, çevreye karşı duyarlı, kendi kültürel değerlerine sahip, evrensel değerlere açık, araştırmacı, yaratıcı, yapıcı, eleştirel düşünen, kendisi ile barışık, sevgiyi paylaşan ve dünya barışı için görevler üstlenen mutlu bireyler yetiştirmektir.</p>
+                        <div class="footer-right">
+                            <ul class="footer-links-soi">
+                                <li><a href="https://www.instagram.com/erkuteyuboglu/?hl=tr"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://github.com/erkuteyuboglu7"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/erkut-ey%C3%BCbo%C4%9Flu-78b4301b9/"><i class="fa fa-linkedin"></i></a></li>
+                            </ul><!-- end links -->
+                        </div>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Linkler</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="@Url.Action("Index","Home")">Ana Sayfa</a></li>
+                            <li><a href="@Url.Action("About","Home")">Hakkımızda</a></li>
+                            <li><a href="@Url.Action("Education","Home")">Eğitim</a></li>
+                            <li><a href="@Url.Action("Gallery","Home")">Galeri</a></li>
+                            <li><a href="@Url.Action("Contact","Home")">İletişim</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>İletişim Detayları</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="#">iletisim@bilgekoleji.com</a></li>
+                            <li><a href="#">www.bilgekoleji.com</a></li>
+                            <li>Değirmendere mah. Hayrat cad. No 92/1 Merkez/RİZE</li>
+                            <li>+90(0212) 444 44 44</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">
+                    <p class="footer-company-name" style="color: white;">2021 &copy; Bilge Koleji Tüm Hakları Saklıdır.</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/timeline.min.js"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+</body>
+</html>

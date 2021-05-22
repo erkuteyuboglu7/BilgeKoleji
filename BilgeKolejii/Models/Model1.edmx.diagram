@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd6b8c85c8af452c9015f58716b5f369" Name="Diagram1">
+        <EntityTypeShape EntityType="BilgeKolejiModel.Brans" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.DersPlani" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Duyurular" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Etkinlikler" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Mudurler" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Ogrenciler" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Ogretmenler" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Saat" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Sinavlar" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Sinif" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Sube" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Veliler" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BilgeKolejiModel.Yoklama" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Ogretmenler_Brans" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Sinavlar_Brans" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_DersPlani_Ogretmenler" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_DersPlani_Saat" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_DersPlani_Sube" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Yoklama_DersPlani" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Ogrenciler_Sube" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Sinavlar_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Veliler_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Yoklama_Ogrenciler" ManuallyRouted="false" />
+        <AssociationConnector Association="BilgeKolejiModel.FK_Sube_Sinif" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,108 @@
+﻿@model BilgeKolejii.Models.Ogretmenler
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Öğretmen Giriş Ekranı</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="~/images/cartoon-male-teacher-illustration-87968359.jpg" alt="IMG">
+                </div>
+
+
+                <div class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        Öğretmen Giriş Ekranı
+                    </span>
+
+                    @ViewBag.Mesaj
+                    @using (Html.BeginForm("Index", "OgtGiris", FormMethod.Post))
+                    {
+                        <div class="wrap-input100 validate-input" data-validate="Lütfen Adınızı Giriniz">
+                            @*@Html.LabelFor(m=>m.TCNo)*@
+                            @Html.TextBoxFor(m => m.Ad, new { @class = "input100", name = "email", placeholder = "Adınızı Giriniz" })
+                            @*<input class="input100" type="text" name="email" placeholder="tc kimlik numarası">*@
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                <i class=""></i>
+                            </span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Lütfen Şifrenizi Giriniz">
+                            @*@Html.LabelFor(m => m.OkulNo)*@
+                            @Html.PasswordFor(m => m.Sifre, new { @class = "input100", name = "pass", placeholder = "Şifre Giriniz" })
+                            @*<input class="input100" type="password" name="pass" placeholder="Okul Numarası">*@
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn" type="submit">
+                                GİRİŞ
+                            </button>
+                        </div>
+                    }
+
+
+
+
+                    <div class="text-center p-t-136">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/bootstrap/js/popper.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+    </script>
+    <!--===============================================================================================-->
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
